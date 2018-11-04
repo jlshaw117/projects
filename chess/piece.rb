@@ -1,2 +1,2 @@
-require_relative 'lib/piece.rb'
-require_relative 'lib/null_piece.rb'
+require_relative 'pieces/piece.rb'
+require_relative 'pieces/null_piece.rb'
