@@ -25,6 +25,11 @@ class Board
     @grid[row][col] = value
   end
 
+  def move_piece(start_pos, end_pos)
+    raise "Invalid move" if self[start_pos].nil?
+    self[start_pos], self[end_pos] = NullPiece.instance, self[start_pos]
+  end
+
   def each_pos(&prc)
     # debugger
     (0..7).each do |row|
