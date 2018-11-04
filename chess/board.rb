@@ -15,6 +15,10 @@ class Board
     Board.empty_board(self)
   end
 
+  def valid_pos?(pos)
+    pos.all? {|num| (0..7).include?(num)}
+  end
+
   def [](pos)
     row,col = pos
     @grid[row][col]
