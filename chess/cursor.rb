@@ -89,7 +89,7 @@ class Cursor
     end
   end
 
-  def swithch!
+  def switch!
     @selected = !@selected
   end
 

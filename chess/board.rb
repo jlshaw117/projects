@@ -1,4 +1,5 @@
 require_relative "piece"
+require_relative "display"
 require "byebug"
 
 class Board

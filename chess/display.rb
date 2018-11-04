@@ -35,6 +35,15 @@ class Display
     nil
   end
 
-  
+  def get_positions
+    pos = []
+    until pos.length == 2
+      system "clear"
+      render
+      input = cursor.get_input
+      pos << cursor.cursor_pos if input
+    end
+    pos
+  end
 
 end
