@@ -6,11 +6,24 @@ module  SlidingPiece
   }
 
   def horizontal_dirs
-    DIRECTIONS[horizontal]
+    DIRECTIONS[:horizontal]
   end
 
   def diagonal_dirs
-    DIRECTIONS[diagonal]
+    DIRECTIONS[:diagonal]
+  end
+
+  def moves
+    moves = []
+    move_dirs.each do |diffs|
+      new_pos = pos.map.with_index {|num, i| num + diffs[i]}
+      while board[new_pos].is_a?(NullPiece)
+        moves << new_pos
+        new_pos.map!.with_index {|num, i| num + diffs[i]}
+      end
+    end
+    moves << new_pos unless board[new_pos].color == color
+    moves
   end
 
   private
@@ -19,7 +32,7 @@ module  SlidingPiece
     raise "Not Implemented"
   end
 
-  def next_unblocked_move
+  def next_unblocked_move(dir)
 
   end
 

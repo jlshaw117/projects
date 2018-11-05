@@ -6,6 +6,7 @@ class Display
 
   def initialize(board)
     @cursor, @board = Cursor.new([0,0], board), board
+    nil
   end
 
   def render

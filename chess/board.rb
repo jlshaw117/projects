@@ -3,7 +3,7 @@ require_relative "display"
 require "byebug"
 
 class Board
-  attr_reader :grid
+  attr_accessor :grid
 
   def self.empty_board(board)
     board.each_pos do |pos|
@@ -14,6 +14,13 @@ class Board
   def initialize
     @grid = Array.new(8) {Array.new(8)}
     Board.empty_board(self)
+
+
+    self[[0,0]] = Queen.new(:white, self, [0,0])
+    self[[0,2]] = Queen.new(:white, self, [0,0])
+    self[[2,0]] = Queen.new(:white, self, [0,0])
+    p self[[0,0]].moves
+    nil
   end
 
   def valid_pos?(pos)

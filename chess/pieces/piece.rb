@@ -1,5 +1,5 @@
 class Piece
-  attr_reader :symbol
+  attr_reader :color, :board, :pos
 
   def initialize(color, board, pos)
     @color = color
@@ -23,9 +23,9 @@ class Piece
 
   end
 
-  def symbol
-    raise "Not Implemented"
-  end
+  # def symbol
+  #   raise "Not Implemented"
+  # end
 
   private
 

@@ -5,7 +5,9 @@ class NullPiece < Piece
   include Singleton
 
   def initialize
-
+    @color = :nothing
+    @board = nil
+    @pos = nil
   end
 
   def symbol
