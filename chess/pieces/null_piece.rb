@@ -5,6 +5,10 @@ class NullPiece < Piece
   include Singleton
 
   def initialize
-    @symbol = " "
+
+  end
+
+  def symbol
+    " "
   end
 end
