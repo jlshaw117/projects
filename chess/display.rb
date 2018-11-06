@@ -12,13 +12,13 @@ class Display
   def render
     board.each_pos do |pos|
       if pos[0].even? && pos[1].even?
-        color = :blue
+        color = :white
       elsif pos[0].even? && pos[1].odd?
-        color = :yellow
+        color = :light_blue
       elsif pos[0].odd? && pos[1].even?
-        color = :yellow
+        color = :light_blue
       elsif pos[0].odd? && pos[1].odd?
-        color = :blue
+        color = :white
       end
       if cursor.cursor_pos == pos
         if cursor.selected

@@ -19,7 +19,7 @@ class Board
     self[[0,0]] = Queen.new(:white, self, [0,0])
     self[[0,2]] = Queen.new(:white, self, [0,0])
     self[[2,0]] = Queen.new(:white, self, [0,0])
-    p self[[0,0]].moves
+    p self[[0,0]].valid_moves
     nil
   end
 

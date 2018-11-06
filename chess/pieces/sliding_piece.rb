@@ -1,3 +1,4 @@
+require "byebug"
 module  SlidingPiece
 
   DIRECTIONS = {
@@ -14,8 +15,11 @@ module  SlidingPiece
   end
 
   def moves
+
     moves = []
     move_dirs.each do |diffs|
+      debugger
+      #assighnment issue
       new_pos = pos.map.with_index {|num, i| num + diffs[i]}
       while board[new_pos].is_a?(NullPiece)
         moves << new_pos
